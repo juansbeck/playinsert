@@ -62,7 +62,7 @@ An open-source cloud gaming platform built for you to play together with your fr
 
 As PlayInsert progresses through its pilot phase, we are designing and testing a wide range of capabilities for you::
 
-1. **🎮 Support for Self-Hosting with Nvidia, AMD, and Intel: Initially, we use Nvidia for game execution, ensuring extensive compatibility with various titles and providing a smooth, diverse gaming experience.
+1. **🕹️ Support for Self-Hosting with Nvidia, AMD, and Intel: Initially, we use Nvidia for game execution, ensuring extensive compatibility with various titles and providing a smooth, diverse gaming experience.
 
 2. **⚡ H.265/HEVC Encoding: For video/audio input and transmission, we utilize x265/AV1 via Nvenc. To drastically minimize latency on unstable networks, we have developed our proprietary UFI routing system, delivering crisp images without compromising data or increasing latency.
 
