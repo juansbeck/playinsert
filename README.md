@@ -58,25 +58,29 @@ An open-source cloud gaming platform built for you to play together with your fr
 
 </div>
 
-## Features 🌟
+## Innovate Features 🚀
 
-As playinsert navigates through its _experimental_ phase, we're in the process of crafting and testing a variety of features for you:
+As PlayInsert progresses through its pilot phase, we are designing and testing a wide range of capabilities for you::
 
-1. **🎮 Proton-GE Compatibility:** We utilize Proton-GE for running games, offering extensive game compatibility and ensuring you can play a wide variety of titles.
+1. **🎮 Support for Self-Hosting with Nvidia, AMD, and Intel: Initially, we use Nvidia for game execution, ensuring extensive compatibility with various titles and providing a smooth, diverse gaming experience.
 
-2. **⚡ QUIC Protocol:** For input and video/audio transmission, we use QUIC via [MoQ][moq-github-url] to significantly reduce latency on variable networks, ensuring crisp visuals without sacrificing data or increasing latency.
+2. **⚡ H.265/HEVC Encoding: For video/audio input and transmission, we utilize x265/AV1 via Nvenc. To drastically minimize latency on unstable networks, we have developed our proprietary UFI routing system, delivering crisp images without compromising data or increasing latency.
 
-3. **🔗 Session IDs:** With a `SESSION_ID`, we seamlessly tie your game progress, achievements, and devices without the need for logging into [playinsert.app][website-link]. Our public CDNs, currently located in Europe (eu-north-1) and the US (us-east-1), further reduce latency for friends playing together from afar. More locations are on the way!
+3. **🔗 Triple A: With a SESSION_ID, we seamlessly link your game progress, achievements, and devices without needing to log in to [playinsert.app][website-link]. Our public content delivery networks (CDNs) with UFI routing further reduce latency for friends playing together from remote locations!
 
-4. **🔄 Automatic Game Progress Sync:** Like Stadia's state share, we automatically sync your game progress based on the *.exe file you're running, allowing you to share your progress with friends via a link.
+4. **🔄 Deep Linking: Allows users to navigate directly to specific content within the application from external links. These links can be shared through various means, such as emails, text messages, or messaging platforms like Telegram, WhatsApp, Twitter, and WeChat. Automatic synchronization of game progress: similar to the shared state in Stadia, we automatically sync your game progress across devices, allowing you to switch from your mobile to your TV, tablet, or PC and share your progress with friends via a link.
 
-5. **👫 Co-op Gameplay:** Play co-op with up to 8 people, or play single player by sharing mouse and keyboard inputs seamlessly (similar to [neko][neko-url]).
+5. **👥 Collaborative Gaming: Participate in cooperative games with up to 8 players.
 
-6. **🌐 Cross-Platform Play:** Our platform is accessible on any device that can run a Chrome-based browser, including Edge, Chrome, Brave, and Arc. And you do not have to set up anything, it's all done and maintained for you.
+6. **🌐 Cross-Platform Gaming: Our platform is accessible from any device running Android, iOS, Windows, Linux, with no additional configuration needed; everything is pre-set and maintained for you.
 
-7. **📊 Bandwidth Optimization:** Experience hardware-accelerated `VMAF` for optimized bandwidth, ensuring the best possible video quality. [Learn More][vmaf-cuda-link]
+7. **📊 Bandwidth Optimization: Experience hardware-accelerated UFI with optimized bandwidth usage, ensuring the best data routing and the highest possible video quality, maximizing bandwidth utilization without sacrificing bitrate. Learn more. [Learn More][vmaf-cuda-link]
 
-8. **🌟 ...and more:** Stay tuned as we continue to add features _sometimes inspired by platforms like Stadia_, to give you the best and most customizable gaming experience.
+8. **🛡️ Security and Privacy: We implement end-to-end encryption on all data transmissions, ensuring your information and game progress are always protected against unauthorized access.
+
+9. **🔧 Advanced Customization: We offer customization options to adjust graphic and performance settings according to your preferences and your device's capabilities, allowing you to optimize your gaming experience.
+
+10. **🌟 ...and more:** Stay tuned as we continue to add features _sometimes inspired by platforms like Stadia_, to give you the best and most customizable gaming experience.
 
 This platform is in an _experimental_ phase, and we're actively working on adding new features. Your feedback and support is very much appreciated.
 
