@@ -86,46 +86,46 @@ This platform is in an _experimental_ phase, and we're actively working on addin
 
 > \[!IMPORTANT]
 >
-> If you're excited about what we're doing and want to support our journey, consider giving us a star ⭐ on our repository. Your support fuels our progress!. \~ ✨
+> If you're thrilled about what we're doing and want to support our project, consider giving us a star 🌟 on our repository. Your support drives our progress! ✨
 
 
 [![][image-star]][github-stars-link]
 
 
-## Getting Started 🎮
+## Getting Started 🕹️
 
-Whether you're looking to self-host playinsert or simply want to try it out without the need for your own GPU, we've got you covered. Choose the path that best suits your needs:
+Whether you wish to host PlayInsert yourself or simply want to try it out without needing your own GPU, we've got everything you need. Choose the option that best aligns with your preferences:
 
-<!-- _You can always change your option later without losing game progress_ -->
+<!-- _You can always alter your choice later without forfeiting game progress_ -->
 
-| If you don't have a Nvidia GPU or prefer not to self-host, you can visit our website. No installation or set up required ! <br/> This is the perfect option for gamers looking to dive straight into the action without any setup. | [👉🏽 Get Access][website-link] |
+| If you lack an Nvidia GPU or prefer not to self-host, you can visit our website. No installation or configuration needed ! <br/>This is the ideal choice for gamers who want to sign up first and receive notifications when the service becomes available. | [👉🏽 Get Access][website-link] |
 | :---------------------------------------- | :----------------------------------------------------------------------------------------------------------------- |
-| If you're interested in self-hosting playinser, continue reading for detailed instructions on how to get started. <br/> This option is ideal if you have your own Nvidia GPU and are comfortable with setting up and managing your own server. | [🛠️ Self Host playinser](#self-hosting) |
+| If you're interested in self-hosting PlayInsert, keep reading for detailed instructions on how to get started. <br/> This choice is ideal if you have your own Nvidia GPU and are comfortable setting up and managing your own server. You'll need to sign up to receive notifications about the availability of self-hosting. | [🛠️ Self Host playinsert](#self-hosting) |
 
 > \[!TIP]
 >
-> Remember, flexibility is key with playinsert. You're free to switch between self-hosting and using `playinser.app` whenever you like, without losing your game progress. \~ 💡
+> Remember, flexibility is crucial with PlayInsert. You can switch between self-hosting and using `playinser.app` at any time, without losing your game progress. \~ 💡
 <a name="self-hosting"></a>
 
-### Self-Hosting playinser 🔨
+### Self-Hosting playinsert 🔨
 
-For those interested in self-hosting, here are is what you need to get your own playinser server up and running:
+If you're considering self-hosting, stay tuned to our official channels as we'll announce when you can start with self-hosting. Here's what you need to get your own PlayInsert server up and running::
 
-- **Nvidia GPU**: Unfortunately, this setup is exclusive to Nvidia GPUs. If you don't own one, consider renting from cloud services like AWS, GCP, or Vast.ai. We highly recommend this approach.
+- **GPU** Nvidia, AMD, or Intel ARC GPU: If you don't have one, you can rent one from cloud services like AWS or Google Cloud. We highly recommend this approach.
 
-- **CUDA**: For GPU acceleration, CUDA version `12.0` or newer is required. Verify your CUDA installation by running `nvcc --version`.
+- **CUDA**: For GPU acceleration on Linux, CUDA version `12.0` or higher is required. Verify your CUDA installation by running `nvcc --version`.
 
-- **Docker**: Ensure you have `docker` and `nvidia-docker` are up to date to avoid compatibility issues with CUDA. You can check your Docker version by running `docker --version` in your terminal.
+- **Docker**: Ensure your `docker` and `nvidia-docker` are up-to-date to avoid CUDA compatibility issues. Check your Docker version by running`docker --version` in your terminal.
 
-- **GPU Driver**: Ensure your GPU drivers are up to date to avoid compatibility issues with CUDA. Nvidia driver version `520.56.06` or newer is required.
+- **GPU Drivers**: Ensure your GPU drivers are up-to-date to avoid CUDA compatibility issues. Nvidia driver version `520.56.06` or later is required.
 
-- **Xorg Display**: Your Nvidia GPU should not be attached to a running X display server. You can confirm this by running `nvidia-smi`.
+- **Xorg Display**: Ensure your Nvidia GPU isn't connected to a running Xorg display server. Confirm this by running `nvidia-smi`.
 
 - **Nvidia-DRM**: Make sure that the `nvidia-drm` module has been loaded and that the module is loaded with the flag `modeset=1`. Confirm this by running `sudo cat /sys/module/nvidia_drm/parameters/modeset` 
 
 > \[!TIP]
 >
-> Typically, if your setup meets the necessary CUDA requirements, the `nvidia-drm` module will already be loaded, particularly in AWS G4dn instances. \~ 💡
+> Typically, if your setup meets the necessary CUDA requirements, the nvidia-drm module will already be loaded, particularly on AWS G4dn instances. \~ 💡
 
 ### Step-by-Step Guide
 
@@ -140,60 +140,6 @@ Follow these steps to get playinser up and running on your system.
 >
 > The setup process will become much simpler with the launch of our CLI tool, so stay tuned for that! In the meantime, you'll need to follow these manual steps.
 
-#### Step 1: Navigate to Your Game Directory
-
-First, change your directory to the location of your `.exe` file. For Steam games, this typically means:
-
-```bash
-cd $HOME/.steam/steam/steamapps
-ls -la .
-```
-
-#### Step 2: Generate a Session ID
-
-Create a unique session ID using the following command:
-
-```bash
-head /dev/urandom | LC_ALL=C tr -dc 'a-zA-Z0-9' | head -c 16
-```
-
-This command generates a random 16-character string. Be sure to note this string carefully, as you'll need it for the next step.
-
-#### Step 3: Launch the playinser Server
-
-With your SESSION_ID ready, insert it into the command below, replacing `<copy here>` with your actual session ID. Then, run the command to start the playinsert server:
-
-```
-docker run --gpus all --device=/dev/dri --name playinsert -it --entrypoint /bin/bash -e SESSION_ID=<copy here> -v "$(pwd)":/game -p 8080:8080/udp --cap-add=SYS_NICE --cap-add=SYS_ADMIN ghcr.io/playinsertness/playinsert/server:nightly
-```
-
-> \[!TIP]
->
-> Ensure UDP port 8080 is accessible from the internet. Use `ufw allow 8080/udp` or adjust your cloud provider's security group settings accordingly.
-
-#### Step 4: Configure the Game within the Container
-
-After executing the previous command, you'll be in a new shell within the container (example: `playinsert@3f199ee68c01:~$`). Perform the following checks:
-
-1. Verify the game is mounted by executing `ls -la /game`. If not, exit and ensure you've correctly mounted the game directory as a volume.
-2. Then, start the Netris server by running `/etc/startup.sh > /dev/null &`.
-
-#### Step 5: Running Your Game
-
-Wait for the `.X11-unix` directory to appear in `/tmp` (check with `ls -la /tmp`). Once it appears, you're ready to launch your game.
-
-- With Proton-GE: `playinsert-proton -pr <game>.exe`
-- With Wine: `playinsert-proton -wr <game>.exe`
-
-#### Step 6: Begin Playing
-
-Finally, construct the play URL with your session ID:
-
-```
-echo "https://playinsert.app/play/$SESSION_ID"
-```
-
-Navigate to this URL in your browser, click on the page to capture your mouse pointer, and start playing!
 
 
 [github-release-link]: https://github.com/wanjohiryan/netris/releases
@@ -203,7 +149,6 @@ Navigate to this URL in your browser, click on the page to capture your mouse po
 [github-license-shield]: https://img.shields.io/github/license/wanjohiryan/netris?color=white&labelColor=black&style=flat-square
 [github-license-link]: https://github.com/wanjohiryan/netris/blob/main/LICENSE
 [github-stars-shield]: https://img.shields.io/github/stars/wanjohiryan/netris?color=ffcb47&labelColor=black&style=flat-square
-[github-stars-link]: https://github.com/wanjohiryan/netris/network/stargazers
 [share-x-shield]: https://img.shields.io/badge/-share%20on%20x-black?labelColor=black&logo=x&logoColor=white&style=flat-square
 [share-x-link]: https://twitter.com/intent/tweet?text=Hey%2C%20check%20out%20this%20Github%20repository.%20It%20is%20an%20open-source%20self-hosted%20Geforce%20Now%20alternative.&url=https%3A%2F%2Fgithub.com%2Fwanjohiryan%2Fnetris
 [share-reddit-shield]: https://img.shields.io/badge/-share%20on%20reddit-black?labelColor=black&logo=reddit&logoColor=white&style=flat-square
