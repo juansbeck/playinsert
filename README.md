@@ -1,5 +1,4 @@
-# 🌟playinsert.app🕹️
-                             The Future of Cloud Gaming: Open-Source, Social, and on Solana Blockchain
+
 
 <div align="center">
 <div>
@@ -30,7 +29,7 @@
 &nbsp;
 &nbsp;
 
-An open-source cloud gaming platform built for you to play together with your friends. <br/> A GeForce NOW alternative that can be self-hosted.<br/>
+An open-source Cloud Gaming platform built for you to play, Social, on Solana Blockchain together with your friends. <br/> A GeForce NOW alternative that can be self-hosted.<br/>
 
 </div>
 
