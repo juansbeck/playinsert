@@ -39,9 +39,8 @@ An open-source cloud gaming platform built for you to play together with your fr
  <div align="center" >
 
 [![][github-release-shield]][github-release-link]
-[![][discord-shield]][discord-link]
 [![][github-license-shield]][github-license-link]
-[![][github-stars-shield]][github-stars-link]
+
 
 **Share the playinsert Repository on Social Media**
 
