@@ -1,5 +1,5 @@
-# playinsert
-The Future of Cloud Gaming: Open-Source, Social, and on Solana Blockchain
+                                                           🌟playinsert.app🕹️
+                             The Future of Cloud Gaming: Open-Source, Social, and on Solana Blockchain
 
 <div align="center">
 <div>
@@ -129,7 +129,7 @@ If you're considering self-hosting, stay tuned to our official channels as we'll
 
 ### Step-by-Step Guide
 
-Follow these steps to get playinser up and running on your system.
+Follow these steps to get playinsert up and running on your system.
 
 > \[!IMPORTANT]
 >
