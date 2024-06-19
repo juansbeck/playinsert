@@ -41,7 +41,7 @@ An open-source Cloud Gaming platform built for you to play, Social, on Solana Bl
 [![][github-license-shield]][github-license-link]
 
 
-**Share the playinsert Repository on Social Media**
+**Share the 🌟playinsert.app🕹️ Repository on Social Media**
 
 [![][share-x-shield]][share-x-link]
 [![][share-reddit-shield]][share-reddit-link]
