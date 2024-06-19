@@ -1,4 +1,4 @@
-                                                           🌟playinsert.app🕹️
+                                                            🌟playinsert.app🕹️
                              The Future of Cloud Gaming: Open-Source, Social, and on Solana Blockchain
 
 <div align="center">
