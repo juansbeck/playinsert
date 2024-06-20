@@ -1,5 +1,4 @@
-# playinsert
-The Future of Cloud Gaming: Open-Source, Social, and on Solana Blockchain
+
 
 <div align="center">
 <div>
@@ -30,7 +29,7 @@ The Future of Cloud Gaming: Open-Source, Social, and on Solana Blockchain
 &nbsp;
 &nbsp;
 
-An open-source cloud gaming platform built for you to play together with your friends. <br/> A GeForce NOW alternative that can be self-hosted.<br/>
+An open-source Cloud Gaming platform built for you to play, Social, on Solana Blockchain together with your friends. <br/> A GeForce NOW alternative that can be self-hosted.<br/>
 
 </div>
 
@@ -39,11 +38,10 @@ An open-source cloud gaming platform built for you to play together with your fr
  <div align="center" >
 
 [![][github-release-shield]][github-release-link]
-[![][discord-shield]][discord-link]
 [![][github-license-shield]][github-license-link]
-[![][github-stars-shield]][github-stars-link]
 
-**Share the playinsert Repository on Social Media**
+
+**Share the 🌟playinsert.app🕹️ Repository on Social Media**
 
 [![][share-x-shield]][share-x-link]
 [![][share-reddit-shield]][share-reddit-link]
@@ -129,7 +127,7 @@ If you're considering self-hosting, stay tuned to our official channels as we'll
 
 ### Step-by-Step Guide
 
-Follow these steps to get playinser up and running on your system.
+Follow these steps to get playinsert up and running on your system.
 
 > \[!IMPORTANT]
 >
